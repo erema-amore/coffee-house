@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./media.css">
+  <link type="image/x-icon" href="./image/icons8-кофейные-зерна-50.png" rel="shortcut icon">
+  <link type="Image/x-icon" href="./image/icons8-кофейные-зерна-50.png" rel="icon">
+  <title>Coffee House</title>
+  
+</head>
+<body>
+  <header class="container">
+    <nav class="nav">
+      
+      <a href="./"><img src="./image/header/logo-1.png" alt="logo" class="logo"></a>
+      <ul class="navAbout">
+        <li>Favorite coffee</li>
+        <li>About</li>
+        <li>Mobile app</li>
+        <li>Contact us</li>
+      </ul>
+      <div class="navMenu">
+        <a href="" >Menu </a>
+      <img src="./image/header/coffee-cup.png" alt="coffee cup">
+      </div>
+
+      <div id="menuModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Select your drink</h2>
+          <button class="modal-button" onclick="selectDrink('Coffee')">Coffee</button>
+          <button class="modal-button" onclick="selectDrink('Tea')">Tea</button>
+          <button class="modal-button" onclick="selectDrink('Desert')">Desert</button>
+        </div>
+      </div>
+      
+    </nav>
+    <div class="headerContainer" >
+      <div class="headerConteinerContent">
+        <h1 class="headerContainerMainText"> <span class="headerContainerEnjoy">Enjoy</span> premium <br> coffee at our <br> charming cafe</h1>
+      <p class="headerContainerSimpleText">With its inviting atmosphere and delicious coffee options, the Coffee <br> House Resource is a popular destination for coffee lovers and those <br> seeking a warm and inviting space to enjoy their favorite beverage.</p>
+      <button class="headerContainerButton">Menu</button>
+
+      </div>
+      
+    </div>
+    
+  </header>
+  <main class="container">
+    <section class="choose">
+      <p class="chooseMainText">Choose your <span class="chooseMain2">favorite</span> coffee</p>
+      <div class="chooseCocktail">
+        <img src="./image/choose/button-icon-dark.png" alt="" class="chooseImg">
+        <img src="./image/choose/coffee-slider-1.png" alt="" >
+        <img src="./image/choose/button-icon-dark (1).png" alt="" class="chooseImg">
+      </div>
+      <p class="chooseSmores">S’mores Frappuccino</p>
+      <p class="chooseInfo">This new drink takes an espresso and mixes it with brown <br> sugar and cinnamon before being topped with oat milk.</p>
+      <p class="choosePrice">$5.50</p>
+      <img src="./image/choose/controls.png" alt="" class="chooseLine">
+    </section>
+    <section class="mid">
+      <p class="midText">Resource is <span class="midText2">the perfect and cozy place</span>  where <br> you can enjoy a variety of hot beverages, relax, <br> catch up with friends, or get some work done.</p>
+      <div class="midBlock">
+        <img src="./image/mid/about-1 .jpg" alt="" class="midBlockImg1"><img src="./image/mid/about-3.jpg" alt="" class="midBlockImg2"><img src="./image/mid/about-2.jpg" alt="" class="midBlockImg3"><img src="./image/mid/about-4.jpg" alt="" class="midBlockImg4">
+      </div>
+    </section>
+    <section class="container">
+      <div class="download">
+        <div class="downloadList">
+          <p class="downloadMainText"><span class="downloadMainText2">Download</span> our apps <br> to start ordering</p>
+          <p class="downloadSimpleText">Download the Resource app today and experience the comfort of ordering your <br> favorite coffee from wherever you are</p>
+          <div class="downloadButtons">
+            <button class="downloadButton">
+              <img src="./image/download/Icon.png" alt="" class="downBtnImg"><span>
+                <p class="downBtnTxt1">Available on the</p>
+                <p class="downBtnTxt2">App Store</p>
+              </span>
+            </button>
+            <button class="downloadButton">
+              <img src="./image/download/Icon (1).png" alt="" class="downBtnImg"><span>
+                <p class="downBtnTxt1">Available on</p>
+                <p class="downBtnTxt2">Google Play</p>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="downloadPhone">
+          <img src="./image/download/mobile-screens.png" alt="" class="downloadPhoneImg">
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <footer class="container">
+    <div class="footerContent">
+      <div class="footerContainer">
+        <div class="footerRight">
+          <p class="footerRightTxt">Sip, Savor, Smile. <br><span class="footerRightTxt1">It’s coffee time!</span> </p>
+          <div class="footerImg">
+            <img class="footerImg1" src="./image/footer/button-icon-light.png" alt="twitter">
+            <img src="./image/footer/button-icon-light (1).png" alt="instagram">
+            <img src="./image/footer/button-icon-light (2).png" alt="faceboock">
+          </div>
+        </div>
+        <div class="footerLeft">
+          <p class="footerLeftMainTxt">Contact us</p>
+          <span class="footerContact">
+            <img src="./image/footer/footerLocation.png" alt="">
+            <p>8558 Green Rd.,  LA</p>
+          </span>
+          <span class="footerContact">
+            <img src="./image/footer/footerPhone.png" alt="">
+            <p>+1 (603) 555-0123</p>
+          </span>
+          <span class="footerContakt">
+            <img src="./image/footer/footerClock.png" alt="">
+            <p>Mon-Sat: 9:00 AM – 23:00 PM</p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Получаем элементы
+    const modal = document.getElementById("menuModal");
+    const menuButton = document.querySelector(".navMenu a");
+    const closeButton = document.querySelector(".close");
+  
+    // Функция для открытия модального окна
+    menuButton.onclick = function(event) {
+      event.preventDefault(); // Предотвращает переход по ссылке
+      modal.style.display = "block";
+    }
+  
+    // Функция для закрытия окна
+    closeButton.onclick = function() {
+      modal.style.display = "none";
+    }
+  
+    // Закрытие окна при клике вне его
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  
+    // Функция для выбора напитка и перехода на соответствующую страницу
+    function selectDrink(drink) {
+      if (drink === 'Coffee') {
+        window.location.href = './coffee.html'; // Переход на страницу Coffee
+      } else if (drink === 'Tea') {
+        window.location.href = './tea.html'; // Переход на страницу Tea
+      } else if (drink === 'Desert') {
+        window.location.href = './desert.html'; // Переход на страницу Desert
+      }
+      modal.style.display = "none";
+    }
+  </script>
+  
+  
+</body>
+</html>
+

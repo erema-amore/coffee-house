@@ -1,0 +1,85 @@
+@media  screen and (max-width: 768px) {
+
+  body {
+    padding: 0;
+    
+}
+
+.container {
+  width: 756px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.headerContainer {
+  background-image: url(./image/header/img-hero.png);
+  width: 688px;
+  height: 644px;
+  background-size: cover;
+  border-radius: 40px;
+  position: relative;
+  margin: 0 20px;
+}
+
+
+.nav {
+  width: 680px;
+}
+
+/* choose */
+
+.choose {
+  display: flex
+  ;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 100px 0;
+  width: 760px;
+}
+
+/* mid */
+
+.mid {
+  width: 756px;
+}
+
+.midBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+/* download */
+
+.download {
+  width: 756px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+}
+
+
+
+
+
+
+@media  screen and (max-width: 400px) {
+
+  body {
+    padding: 0;
+}
+
+.container {
+  width: 768px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+}
